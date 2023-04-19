@@ -9,4 +9,5 @@ def index():
 
 @app.route('/orders/<index>')
 def display_order(index):
-    return render_template('order.jinja', orders=orders, index=index)
+    resulting_order=orders[int(index)]
+    return render_template('order.jinja', order=resulting_order)
