@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(27, 18, 18);
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 1px 7px 4px goldenrod
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    align-items: center;
+    border: solid 2px yellow;
+    background-color: orange;
+    text-align: left;
+}
+
+td {
+    padding-right: 20px;
+}

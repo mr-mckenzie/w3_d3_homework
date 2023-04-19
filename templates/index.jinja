@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Bad Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>Big Bad Books</h1>
@@ -20,7 +21,7 @@
     {% for order in orders %}
 
     <tr>
-        <td> <a href="/orders/{{orders.index(order)}}">{{orders.index(order) + 1}}</a>{{ order.customer_name }}</td>
+        <td> <a href="/orders/{{orders.index(order)}}">{{orders.index(order) + 1}}</a> - {{ order.customer_name }}</td>
         <td> {{ order.order_date }}</td>
         <td> {{ order.book_title }}</td>
         <td> {{ order.author }}</td>
