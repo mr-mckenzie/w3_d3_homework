@@ -7,7 +7,7 @@
     <title>Big Bad Books</title>
 </head>
 <body>
-    <h1>Big Bad Books</h1>
+    <h1>Order Details</h1>
     <table>
     <tr>
         <th>Customer Name</th>
@@ -16,18 +16,17 @@
         <th>Author</th>
         <th>Quantity</th>
     </tr>
-    
-    {% for order in orders %}
+
 
     <tr>
-        <td> <a href="/orders/{{orders.index(order)}}">{{orders.index(order) + 1}}</a>{{ order.customer_name }}</td>
-        <td> {{ order.order_date }}</td>
-        <td> {{ order.book_title }}</td>
-        <td> {{ order.author }}</td>
-        <td> {{ order.quantity }}</td>
+        <td> {{ orders[int(index)].customer_name }}</td>
+        <td> {{ orders.order_date }}</td>
+        <td> {{ orders.book_title }}</td>
+        <td> {{ orders.author }}</td>
+        <td> {{ orders.quantity }}</td>
     </tr>
-    {% endfor %}
     </table>
+    
     
 </body>
 </html>
